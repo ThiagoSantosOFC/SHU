@@ -14,6 +14,7 @@ function Map() {
             href="//www.arcgis.com/apps/Embed/index.html?webmap=8b596e823b454226aa846a2d5e57fccf&extent=7.5002,40.383,18.948,44.6949&zoom=true&scale=true&disable_scroll=false&theme=light"
             style={{ color: '#0000FF', textAlign: 'left' }}
             target="_blank"
+            rel="noreferrer"
           >
             View larger map
           </a>
