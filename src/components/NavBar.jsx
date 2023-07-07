@@ -3,12 +3,12 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-import NavLogo from "../public/assets/logo mosteiro500x200.png";
+import NavLogo from "../public/logo_shu.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#006A39");
+  const [navBg, setNavBg] = useState("#");
   const [linkColor, setLinkColor] = useState("#ffffff");
 
   const handleNav = () => {
@@ -59,11 +59,7 @@ const Navbar = () => {
                 Saiba Mais
               </Link>
             </li>
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/kingstory">
-                A História do Rei
-              </Link>
-            </li>
+ 
 
             <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
               <Link legacyBehavior href="/credits">
@@ -137,14 +133,7 @@ const Navbar = () => {
                   Saiba Mais
                 </li>
               </Link>
-              <Link href="/kingstory">
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm font-bold"
-                >
-                  A História do Rei
-                </li>
-              </Link>
+
               <Link href="/credit">
                 <li
                   onClick={() => setNav(false)}
