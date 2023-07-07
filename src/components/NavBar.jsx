@@ -8,7 +8,7 @@ import NavLogo from "../public/logo_shu.png";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#");
+  const [navBg, setNavBg] = useState("#62a7f8");
   const [linkColor, setLinkColor] = useState("#ffffff");
 
   const handleNav = () => {
