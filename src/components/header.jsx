@@ -1,65 +1,37 @@
 import Link from "next/link";
 import React from "react";
 
-const Main = () => {
+const Header = ({ lang }) => {
+  const isItalian = lang === "italian";
+
   return (
-    <div id="home" className=" text-center" >
-      <div className="mt-12 mx-auto flex justify-center items-center">
-        <div>
-          <h1 className="text-xl py-4 text-white">
-            Esse site tem a intenção de ser um{" "}
-            <span className="text-[#5651e5]"> apoio pedagógico</span>,
-            <br />
-            se está a procura de informação sobre o mosteiro consulte o site
-            original
-          </h1>
-       
-          <Link
-            href="/banner"
-            className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
-          >
-            <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
-            <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-              <svg
-                className="w-5 h-5 text-green-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </span>
-            <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-              <svg
-                className="w-5 h-5 text-green-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </span>
-            <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-            Hiperligações
-            </span>
-          </Link>
-      
-        </div>
-      </div>
+    <div id="home" className="text-center text-white py-10">
+      <h1>{isItalian ? "Pagina iniziale" : "Water Heritage Nocera Umbra"}</h1>
+
+      <br />
+      <b style={{ color: "white" }}>
+        {isItalian
+          ? "Water Heritage Nocera Umbra è un progetto ideato per diffondere il patrimonio di uno degli elementi naturali che caratterizzano la piccola città di Nocera Umbra: l’acqua."
+          : "Water Heritage Nocera Umbra is a project designed to spread awareness of the heritage of one of the natural elements that characterizes the small town of Nocera Umbra: water."}
+      </b>
+      <br />
+
+      <br />
+      <b style={{ color: "white" }}>
+        {isItalian
+          ? "Nocera Umbra è conosciuta come la città delle acque perché si trova vicino a numerose sorgenti e, fin dall’antichità, l’acqua ha plasmato lo sviluppo del luogo e ne ha favorito la notorietà al di fuori dei suoi confini. Tuttavia, nel corso dei secoli, si è persa la tradizione e la conoscenza legata all’acqua."
+          : "Nocera Umbra is known as the city of waters because it is located near numerous springs and, since ancient times, water has shaped the development of the place and has favored its notoriety beyond its borders. However, over the centuries, the tradition and knowledge related to water have been lost."}
+      </b>
+      <br />
+
+      <br />
+      <b style={{ color: "white" }}>
+        {isItalian
+          ? "Il progetto è stato ideato e sviluppato per il Social Hackaton Umbria 2023, un programma che riunisce giovani provenienti da tutto il mondo per creare e la sviluppare progetti digitali che affrontino le sfide dell’Agenda 2030 in tema di sostenibilità (in particolare l’Obiettivo di Sviluppo Sostenibile numero 4 che riguarda l’energia culturale). Uno dei principali partner è il CEDAT (Centro Documentazione delle Acque e della Terra), con sede a Nocera Umbra, che ha fornito tutti i dati necessari alla realizzazione di questo progetto digitale. In particolare, Water Heritage Nocera Umbra si propone di creare una mappa precisa all’interno di una web app che mostri le coordinate puntuali di tutte le fonti d’acqua presenti nel territorio, tra cui fontane, sorgenti, strutture polivalenti, fontanili/abbeveratoi, lavatoi, serbatoi/conservoni e altre. Ogni punto d’interesse è dotato di una scheda informativa con tecnologia QR e NFC. I visitatori possono semplicemente avvicinare il loro smartphone alla scheda per accedere a una guida audio in doppia lingua (italiano/inglese)."
+          : "The project was designed and developed for the Social Hackathon Umbria 2023, a program that brings together young people from all over the world to create and develop digital projects that address the challenges of the 2030 Agenda on sustainability (in particular Sustainable Development Goal number 4, which concerns cultural energy). One of the main partners is CEDAT (Documentation Center for Water and Earth), based in Nocera Umbra, which provided all the necessary data for the realization of this digital project. In particular, Water Heritage Nocera Umbra aims to create a precise map within a web app that shows the precise coordinates of all the water sources present in the territory, including fountains, springs, multipurpose structures, drinking troughs, washhouses, tanks/reservoirs, and others. Each point of interest is equipped with an information card with QR and NFC technology. Visitors can simply bring their smartphone close to the card to access an audio guide in two languages (Italian/English)." }
+      </b>
     </div>
   );
 };
 
-export default Main;
+export default Header;
