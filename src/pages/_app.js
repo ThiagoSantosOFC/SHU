@@ -1,6 +1,6 @@
 import Navbar from "../components/NavBar";
 import "../styles/globals.css";
-import connect from '../utils/mongo.config';
+
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {

@@ -2,33 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+:root {
+  --foreground-rgb: 148, 192, 252;
+  --background-start-rgb: 98, 176, 248;
+  --background-end-rgb: 24, 38, 83
 }
 
-@layer base {
-  body {
-    @apply bg-[#03532E] text-[#ffffff] tracking-wide
-  }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 148, 192, 252;
+    --background-start-rgb: 98, 176, 248;
+    --background-end-rgb: 24, 38, 83
   }
+}
 
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
-  }
 
-  h2 {
-    @apply text-3xl sm:text-4xl
-  }
-  
-  li {
-    @apply cursor-pointer
-  }
-
-  button {
-    @apply rounded-xl uppercase bg-gradient-to-r from-[#69AB3D] to-[#AED36c] text-white
-  }
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
