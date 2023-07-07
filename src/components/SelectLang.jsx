@@ -7,7 +7,8 @@ function SelectLang(props) {
     <select value={selectedLanguage} onChange={onLanguageChange}>
       {languages.map((language) => (
         <option key={language.code} value={language.code}>
-          {language.name}
+          {language.name} {language.code === 'en' && <img src="/images/england-flag.png" alt="English flag" />}
+          {language.code === 'uk' && <img src="/images/uk-flag.png" alt="UK flag" />}
         </option>
       ))}
     </select>
