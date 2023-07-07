@@ -53,21 +53,47 @@ const Navbar = () => {
               <Link legacyBehavior href="/">
                 Home
               </Link>
-            </li>
+            </li> 
+
             <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/knowmore">
-                Saiba Mais
+              <Link legacyBehavior href="/Map">
+                Map
               </Link>
             </li>
- 
 
             <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
               <Link legacyBehavior href="/credits">
-                Créditos
+                Contacts
               </Link>
             </li>
 
-          
+            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+              <Link legacyBehavior href="/knowmore">
+                Knowmore
+              </Link>
+            </li>
+
+            <li className="ml-10 pt-2.5">
+              <Link legacyBehavior href="/">
+              <Image 
+                src="/united-kingdom(1).png"
+                alt="italy"
+                width="24"
+                height="24"
+                className="cursor-pointer"
+              />
+              </Link>
+              <Link legacyBehavior href="/">
+                <Image
+                  src="/italy(1).png"
+                  alt="italy"
+                  width="24"
+                  height="24"
+                  className="cursor-pointer"
+                />
+              </Link>
+            </li>
+
           </ul>
           {/* Hamburger Icon */}
           <div
@@ -130,7 +156,7 @@ const Navbar = () => {
                   onClick={() => setNav(false)}
                   className="py-4 text-sm font-bold"
                 >
-                  Saiba Mais
+                  Knowmore
                 </li>
               </Link>
 
@@ -139,10 +165,18 @@ const Navbar = () => {
                   onClick={() => setNav(false)}
                   className="py-4 text-sm font-bold"
                 >
-                  Créditos
+                  Contacts
                 </li>
               </Link>
     
+              <Link href="/map">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm font-bold"
+                >
+                  Map
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
