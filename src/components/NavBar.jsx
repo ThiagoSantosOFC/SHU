@@ -6,13 +6,14 @@ import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
 import CEDAT from "../public/CEDAT.jpeg";
+import Italian from "../public/italy(1).png";
+import English from "../public/united-kingdom(1).png";
 
 const Navbar = ({ lang }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
   const [linkColor, setLinkColor] = useState("#ffffff");
-   
 
   const handleNav = () => {
     setNav(!nav);
@@ -90,7 +91,17 @@ const Navbar = ({ lang }) => {
   };
 
   const handleLanguageChange = (event) => {
-    window.location.href = `/${event.target.value}`;
+    const selectedLang = event.target.value;
+
+    if (selectedLang === "en") {
+      setLang("en");
+      //refresh the page to change the language
+      window.location.reload();
+    } 
+    if (selectedLang === "Italian") {
+      setLang("Italian");
+      window.location.reload();
+    }
   };
 
   return (
@@ -105,56 +116,38 @@ const Navbar = ({ lang }) => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="flex justify-between items-center">
           <Link legacyBehavior href="/">
-          <a className="pr-4">
-            <Image
-              src={CEDAT}
-              alt="/"
-              width="65"
-              height="65"
-              className="cursor-pointer border rounded-3xl"
-            />
-          </a>
-        </Link> 
-        <Link legacyBehavior href="/">
-          <a>
-            <Image
-              src={NavLogo}
-              alt="/"
-              width="200"
-              height="200"
-              className="cursor-pointer border rounded-2xl"
-            />
-          </a>
-        </Link>
+            <a className="pr-4">
+              <Image
+                src={CEDAT}
+                alt="/"
+                width="65"
+                height="65"
+                className="cursor-pointer border rounded-3xl"
+              />
+            </a>
+          </Link>
+          <Link legacyBehavior href="/">
+            <a>
+              <Image
+                src={NavLogo}
+                alt="/"
+                width="200"
+                height="200"
+                className="cursor-pointer border rounded-2xl"
+              />
+            </a>
+          </Link>
         </div>
-
 
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {renderNavLinks()}
             <li className="ml-10 pt-2.5">
-              <select
-                value={lang}
-                onChange={handleLanguageChange}
-                className="bg-transparent border-none"
-              >
-                <option value="en">
-                  <img
-                    src="/images/england-flag.png"
-                    alt="English"
-                    width="24"
-                    height="24"
-                  />
-                </option>
-                <option value="Italian">
-                  <img
-                    src="/italy(1).png"
-                    alt="Italian"
-                    width="24"
-                    height="24"
-                  />
-                </option>
-              </select>
+
+
+        
+   
+
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -179,7 +172,7 @@ const Navbar = ({ lang }) => {
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#006A39] p-10 ease-in duration-500"
+              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#62a7f8] p-10 ease-in duration-500"
               : "fixed left-[-150%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -188,11 +181,12 @@ const Navbar = ({ lang }) => {
               <Link legacyBehavior href="/">
                 <a>
                   <Image src={NavLogo} width="75" height="75" alt="/" />
+                  <Image src={CEDAT} width="75" height="75 " alt="/"/>
                 </a>
               </Link>
               <div
                 onClick={handleNav}
-                className="rounded-full shadow-lg shadow-green-900 p-3 cursor-pointer"
+                className="rounded-full shadow-lg shadow-blue-500 p-3 cursor-pointer"
               >
                 <AiOutlineClose />
               </div>
@@ -207,28 +201,7 @@ const Navbar = ({ lang }) => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">{renderNavLinks()}</ul>
             <li className="mt-4">
-              <select
-                value={lang}
-                onChange={handleLanguageChange}
-                className="bg-transparent border-none"
-              >
-                <option value="en">
-                  <img
-                    src="/images/england-flag.png"
-                    alt="English"
-                    width="24"
-                    height="24"
-                  />
-                </option>
-                <option value="Italian">
-                  <img
-                    src="/italy(1).png"
-                    alt="Italian"
-                    width="24"
-                    height="24"
-                  />
-                </option>
-              </select>
+
             </li>
           </div>
         </div>

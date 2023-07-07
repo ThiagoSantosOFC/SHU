@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import Map from "../components/Map";
+
 export default function Home() {
   return (
     <div className="min-h-full items-center columns-1 justify-center py-16 px-4 sm:px-6 lg:px-8 ">
