@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Digital Monastery</title>
+        <title>Nocera Water heritage</title>
         
-        <meta name="description" content="Learn about Batalha Monastery" />
+        <meta name="description" content="Learn about Nocera water" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Navbar />
