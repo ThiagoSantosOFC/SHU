@@ -47,7 +47,7 @@ const Navbar = ({ lang }) => {
           </li>
 
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-            <Link legacyBehavior href="/credits">
+            <Link legacyBehavior href="/contacts">
               Contacts
             </Link>
           </li>
@@ -75,7 +75,7 @@ const Navbar = ({ lang }) => {
           </li>
 
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-            <Link legacyBehavior href="/credits">
+            <Link legacyBehavior href="/contacts">
               Contatti
             </Link>
           </li>

@@ -3,6 +3,7 @@ import App from 'next/app';
 import Navbar from '../components/Navbar';
 import SelectLang from '../components/SelectLang';
 import '../styles/globals.css';
+import Footer from '../components/footer';
 
 class NWH extends App {
   constructor(props) {
@@ -24,6 +25,7 @@ class NWH extends App {
       <>
         <Navbar lang={selectedLanguage} />
         <Component {...pageProps} lang={selectedLanguage} />
+        <Footer />
       </>
     );
   }
