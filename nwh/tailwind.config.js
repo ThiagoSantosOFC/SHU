@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'french-pass': {
+      'azul': {
         '50': '#eff6ff',
         '100': '#dbeafe',
         '200': '#b9d8fd',
