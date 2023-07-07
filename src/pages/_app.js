@@ -1,22 +1,32 @@
-import Navbar from "../components/NavBar";
-import "../styles/globals.css";
+import React from 'react';
+import App from 'next/app';
+import Navbar from '../components/Navbar';
+import SelectLang from '../components/SelectLang';
+import '../styles/globals.css';
 
-import Head from "next/head";
+class NWH extends App {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedLanguage: 'en',
+    };
+  }
 
-function MyApp({ Component, pageProps }) {
+  handleLanguageChange = (event) => {
+    this.setState({ selectedLanguage: event.target.value });
+  };
 
-  return (
-    <div>
-      <Head>
-        <title>Nocera Water heritage</title>
-        
-        <meta name="description" content="Learn about Nocera water" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <Navbar />
-      <Component  {...pageProps} />
-    </div>
-  );
+  render() {
+    const { Component, pageProps } = this.props;
+    const { selectedLanguage } = this.state;
+
+    return (
+      <>
+        <Navbar lang={selectedLanguage} />
+        <Component {...pageProps} lang={selectedLanguage} />
+      </>
+    );
+  }
 }
 
-export default MyApp;
+export default NWH;

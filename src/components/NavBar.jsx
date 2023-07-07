@@ -5,7 +5,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 import NavLogo from "../public/SHULOGO.png";
 
-const Navbar = () => {
+const Navbar = ({ lang }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
@@ -25,6 +25,70 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
+  const renderNavLinks = () => {
+    if (lang === "en") {
+      return (
+        <>
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/">
+              Home
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/Map">
+              Map
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/credits">
+              Contacts
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/knowmore">
+              Knowmore
+            </Link>
+          </li>
+        </>
+      );
+    } else if (lang === "Italian") {
+      return (
+        <>
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/">
+              Casa
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/Map">
+              Mappa
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/credits">
+              Contatti
+            </Link>
+          </li>
+
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <Link legacyBehavior href="/knowmore">
+              Saperne di più
+            </Link>
+          </li>
+        </>
+      );
+    }
+  };
+
+  const handleLanguageChange = (event) => {
+    window.location.href = `/${event.target.value}`;
+  };
 
   return (
     <div
@@ -49,51 +113,31 @@ const Navbar = () => {
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/">
-                Home
-              </Link>
-            </li> 
-
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/Map">
-                Map
-              </Link>
-            </li>
-
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/credits">
-                Contacts
-              </Link>
-            </li>
-
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/knowmore">
-                Knowmore
-              </Link>
-            </li>
-
+            {renderNavLinks()}
             <li className="ml-10 pt-2.5">
-              <Link legacyBehavior href="/">
-              <Image 
-                src="/united-kingdom(1).png"
-                alt="italy"
-                width="24"
-                height="24"
-                className="cursor-pointer"
-              />
-              </Link>
-              <Link legacyBehavior href="/">
-                <Image
-                  src="/italy(1).png"
-                  alt="italy"
-                  width="24"
-                  height="24"
-                  className="cursor-pointer"
-                />
-              </Link>
+              <select
+                value={lang}
+                onChange={handleLanguageChange}
+                className="bg-transparent border-none"
+              >
+                <option value="en">
+                  <img
+                    src="/images/england-flag.png"
+                    alt="English"
+                    width="24"
+                    height="24"
+                  />
+                </option>
+                <option value="Italian">
+                  <img
+                    src="/italy(1).png"
+                    alt="Italian"
+                    width="24"
+                    height="24"
+                  />
+                </option>
+              </select>
             </li>
-
           </ul>
           {/* Hamburger Icon */}
           <div
@@ -137,47 +181,37 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[90%] md:w-[80%] py-2 font-bold">
-                &quot;Viajar? Para viajar basta Existir.&quot; - Fernando Pessoa.
+                &quot;Viajar? Para viajar basta Existir.&quot; - Fernando
+                Pessoa.
               </p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
-              <Link href="/">
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm font-bold"
-                >
-                  Home
-                </li>
-              </Link>
-              <Link href="/knowmore">
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm font-bold"
-                >
-                  Knowmore
-                </li>
-              </Link>
-
-              <Link href="/credit">
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm font-bold"
-                >
-                  Contacts
-                </li>
-              </Link>
-    
-              <Link href="/map">
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm font-bold"
-                >
-                  Map
-                </li>
-              </Link>
-            </ul>
+            <ul className="uppercase">{renderNavLinks()}</ul>
+            <li className="mt-4">
+              <select
+                value={lang}
+                onChange={handleLanguageChange}
+                className="bg-transparent border-none"
+              >
+                <option value="en">
+                  <img
+                    src="/images/england-flag.png"
+                    alt="English"
+                    width="24"
+                    height="24"
+                  />
+                </option>
+                <option value="Italian">
+                  <img
+                    src="/italy(1).png"
+                    alt="Italian"
+                    width="24"
+                    height="24"
+                  />
+                </option>
+              </select>
+            </li>
           </div>
         </div>
       </div>
