@@ -2,14 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
+import CEDAT from "../public/CEDAT.jpeg";
 
 const Navbar = ({ lang }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
   const [linkColor, setLinkColor] = useState("#ffffff");
+   
 
   const handleNav = () => {
     setNav(!nav);
@@ -100,6 +103,18 @@ const Navbar = ({ lang }) => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+        <div className="flex justify-between items-center">
+          <Link legacyBehavior href="/">
+          <a className="pr-4">
+            <Image
+              src={CEDAT}
+              alt="/"
+              width="65"
+              height="65"
+              className="cursor-pointer border rounded-3xl"
+            />
+          </a>
+        </Link> 
         <Link legacyBehavior href="/">
           <a>
             <Image
@@ -107,10 +122,13 @@ const Navbar = ({ lang }) => {
               alt="/"
               width="200"
               height="200"
-              className="cursor-pointer"
+              className="cursor-pointer border rounded-2xl"
             />
           </a>
         </Link>
+        </div>
+
+
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {renderNavLinks()}
