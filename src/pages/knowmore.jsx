@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import NavBar from "../components/Navbar";
 
 export default function Knowmore() {
 
     return (
         <div>
-            <NavBar />
+  
 <div class="ml-12 container  mx-auto md:px-6">
   {/* <!-- Section: Design Block --> */}
   <section class="">

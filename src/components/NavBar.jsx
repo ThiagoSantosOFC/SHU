@@ -9,7 +9,7 @@ import CEDAT from "../public/CEDAT.jpeg";
 import Italian from "../public/italy(1).png";
 import English from "../public/united-kingdom(1).png";
 
-const Navbar = ({ lang }) => {
+const NavBar = ({ lang }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
@@ -210,4 +210,4 @@ const Navbar = ({ lang }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;

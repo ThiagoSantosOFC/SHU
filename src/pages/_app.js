@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import Navbar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import SelectLang from '../components/SelectLang';
 import '../styles/globals.css';
 import Footer from '../components/footer';
@@ -23,7 +23,7 @@ class NWH extends App {
 
     return (
       <>
-        <Navbar lang={selectedLanguage} />
+        <NavBar lang={selectedLanguage} />
         <Component {...pageProps} lang={selectedLanguage} />
         <Footer />
       </>
