@@ -1,6 +1,6 @@
 import Navbar from "../components/NavBar";
 import "../styles/globals.css";
-
+import Footer from "../components/footer";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Navbar />
       <Component  {...pageProps} />
+      <Footer />
     </div>
   );
 }

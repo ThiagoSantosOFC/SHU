@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import NavBar from "../components/NavBar";
 
-export default function Knowmore() {
+export default function contactos() {
 
     return (
         <div>
@@ -12,7 +12,7 @@ export default function Knowmore() {
   <section class="">
     <div class="flex flex-wrap">
       <div class="mt-52 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
-        <h2 class="mb-6 text-3xl text-black font-bold">About the Project</h2>
+        <h2 class="mb-6 text-3xl text-black font-bold">Contact us</h2>
         <p class="mb-6 text-neutral-500 text-black dark:text-neutral-300">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Laudantium, modi accusantium ipsum corporis quia asperiores

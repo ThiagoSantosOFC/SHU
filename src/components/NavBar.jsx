@@ -2,14 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
+import CEDAT from "../public/CEDAT.jpeg";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
   const [linkColor, setLinkColor] = useState("#ffffff");
+   
 
   const handleNav = () => {
     setNav(!nav);
@@ -36,6 +39,18 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+        <div className="flex justify-between items-center">
+          <Link legacyBehavior href="/">
+          <a className="pr-4">
+            <Image
+              src={CEDAT}
+              alt="/"
+              width="65"
+              height="65"
+              className="cursor-pointer border rounded-3xl"
+            />
+          </a>
+        </Link> 
         <Link legacyBehavior href="/">
           <a>
             <Image
@@ -43,36 +58,39 @@ const Navbar = () => {
               alt="/"
               width="200"
               height="200"
-              className="cursor-pointer"
+              className="cursor-pointer border rounded-2xl"
             />
           </a>
         </Link>
+        </div>
+
+
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-5">
               <Link legacyBehavior href="/">
                 Home
               </Link>
             </li> 
 
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-5">
               <Link legacyBehavior href="/Map">
                 Map
               </Link>
             </li>
 
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
-              <Link legacyBehavior href="/credits">
+            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-5">
+              <Link legacyBehavior href="/contacts">
                 Contacts
               </Link>
             </li>
 
-            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+            <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-5">
               <Link legacyBehavior href="/knowmore">
                 Knowmore
               </Link>
             </li>
-
+            
             <li className="ml-10 pt-2.5">
               <Link legacyBehavior href="/">
               <Image 
@@ -160,7 +178,7 @@ const Navbar = () => {
                 </li>
               </Link>
 
-              <Link href="/credit">
+              <Link href="/contacts">
                 <li
                   onClick={() => setNav(false)}
                   className="py-4 text-sm font-bold"

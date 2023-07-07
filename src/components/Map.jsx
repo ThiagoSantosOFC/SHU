@@ -2,7 +2,7 @@ import React from 'react';
 
 function Map() {
   return (
-    <div className="embed-container">
+    <div className="bg-transparent embed-container">
       <style>
         {`.embed-container {
           position: relative;
@@ -29,12 +29,9 @@ function Map() {
       <iframe
         width="500"
         height="400"
-        frameBorder="0"
-        scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
         title="Cedat"
         src="//www.arcgis.com/apps/Embed/index.html?webmap=8b596e823b454226aa846a2d5e57fccf&extent=12.9481,43.1137,12.9705,43.122&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
+        className="bg-transparent"
       ></iframe>
     </div>
   );
