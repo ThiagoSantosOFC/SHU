@@ -4,8 +4,8 @@ import waterHeritage from "../public/assets/waterHeritage.png";
 
 const Header = () => {
   return (
-    <div id="home" className="w-full  h-screen text-center">
-      <div className="max-w-[1024px] w-full  h-full pt-24 mx-auto flex flex-col justify-center items-center">
+    <div id="home" className="w-full h-screen text-center">
+      <div className="max-w-[1024px] w-full h-full pt-24 mx-auto flex flex-col justify-center items-center sm:flex-col">
         <div className="mb-8">
           <p className="uppercase text-sm tracking-widest pt-24 text-gray-600">
             <strong>
