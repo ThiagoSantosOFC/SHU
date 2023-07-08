@@ -27,7 +27,7 @@ const Credits = () => {
       <div className="w-screen lg:max-w-4xl  pt-6">
         <div>
           <h2 className="mt-6 text-center text-6xl font-extrabold">
-            Créditos
+            Team
           </h2>
         </div>
         <br />
