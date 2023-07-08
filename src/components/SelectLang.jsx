@@ -1,29 +1,49 @@
 import { useRouter } from "next/router";
-
+import { useState } from "react";
 const SelectLang = () => {
   const router = useRouter();
 
-  const handleLangChange = (lang) => {
-    localStorage.setItem("lang", lang);
-    if (lang === "en") {
-      router.push("../en");
+  const langGet = ()  => {
+    if (router.pathname.startsWith("/en")) {
+      return "en";
     } else {
-      router.push(router.pathname, router.asPath, { locale: lang });
+      return "italian";
     }
   };
 
-  const lang = router.locale === "en" ? "English" : "Italiano";
+  const [lang, setLang] = useState(langGet());
 
+  const handleLangChange = (lang) => {
+    setLang(lang);
+    if (lang === "en") {
+      router.push("/en");
+    } else {
+      router.push("/");
+    }
+
+  };
+
+  const label = lang === "en" ? "Language" : "Lingua";
+
+
+
+
+  
   return (
-    <div className="flex items-center">
-      <span className="mr-2">Lingua:</span>
+    <div className="flex justify-center items-center">
+      <label htmlFor="lang-select" className="mr-2">
+        {label}
+      </label>
       <select
-        className="px-2 py-1 rounded-md bg-gray-200 mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        id="lang-select"
+        className="px-2 py-1 rounded-md bg-gray-200 text-black mb-2 text-sm font-medium"
         value={lang}
-        onChange={(e) => handleLangChange(e.target.value === "English" ? "en" : "")}
+        onChange={(e) => handleLangChange(e.target.value)}
       >
-        <option value="Italiano">Italiano</option>
-        <option value="English">English</option>
+        <option className="text-black" value="italian">
+          Italiano
+        </option>
+        <option value="en">English</option>
       </select>
     </div>
   );
