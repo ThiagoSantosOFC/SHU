@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Card = ({ imageSrc, name, role }) => {
   return (
-    <div className="w-full max-w-sm rounded-lg shadow-md bg-[#ffffffda] border-[#ffffffda] my-2">
+    <div className="w-full max-w-sm rounded-lg shadow-md bg-[#ffffffda] border-[#ffffffda]">
       <div className="flex flex-grow flex-col items-center pb-10 pt-6">
         <Image
           className="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -26,48 +26,50 @@ const Credits = () => {
     <div className="min-h-full flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="w-screen lg:max-w-4xl  pt-6">
         <div>
-          <h2 className="mt-6 text-center text-6xl font-extrabold">Team</h2>
+          <h2 className="mt-6 text-center text-6xl font-extrabold">
+            Team
+          </h2>
         </div>
         <br />
         <div className="flex flex-col md:flex-row text-[#020617] space-x-2 justify-center">
           <div className="flex justify-center items-center w-full">
-            <div className="grid md:grid-cols-6 gap-4 flex-wrap w-full md:w-auto flex-col">
-              <div className="md:col-span-2 flex-grow">
+            <div className="grid grid-cols-6 gap-4 flex-wrap w-full">
+              <div className="col-span-2 row-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/Thiago.jpg"
                   name="Thiago Santos"
                   role="Fullstack Developer"
                 />
               </div>
-              <div className="md:col-span-2 flex-grow">
+              <div className="col-span-2 row-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/Pedro.jpg"
                   name="Pedro Jesus"
                   role="Back End Developer"
                 />
               </div>
-              <div className="md:col-span-2 flex-grow">
+              <div className="col-span-2 row-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/Vasco.jpg"
                   name="Vasco Duarte"
                   role="Frontend Developer"
                 />
               </div>
-              <div className="md:col-span-2 flex-grow">
+              <div className="col-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/mateo.jpg"
                   name="Matteo Piselli"
-                  role="Founder"
+                  role="Fondatore"
                 />
               </div>
-              <div className="md:col-span-2 flex-grow">
+              <div className="col-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/vito.jpg"
                   name="Vittoria Mancini"
                   role="Social Media Manager Junior Copywriter"
                 />
               </div>
-              <div className="md:col-span-2 flex-grow">
+              <div className="col-span-2 flex-grow">
                 <Card
                   imageSrc="/credits/filipo.png"
                   name="Filippo Bistocchi"

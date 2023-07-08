@@ -57,6 +57,12 @@ const NavBar = ({ lang }) => {
               Knowmore
             </Link>
           </li>
+          
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
+            <Link legacyBehavior href="/Team">
+              Team
+            </Link>
+          </li>
         </>
       );
     } else if (lang === "italian") {
@@ -83,6 +89,12 @@ const NavBar = ({ lang }) => {
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/knowmore">
               Saperne di più
+            </Link>
+          </li>
+          
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
+            <Link legacyBehavior href="/Team">
+              Team
             </Link>
           </li>
         </>
