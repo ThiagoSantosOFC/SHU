@@ -1,4 +1,6 @@
-import Header from "../components/itl/header";
+import Header from "../../components/eng/header";
+import Footer from '../components/eng/footer';
+import NavBar from '../components/eng/NavBar';
 
 export default function Home() {
   return (
