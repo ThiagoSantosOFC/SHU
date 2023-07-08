@@ -10,12 +10,12 @@ export default function contactos() {
           <div class="flex flex-wrap">
             <br />
             <div class="mt-52 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
-              <h2 class="mb-6 text-3xl text-black font-bold">Contattaci</h2>
+              <h1  class="mb-6 text-5xl font-bold">Contattaci</h1>
               <p class="mb-6 text-neutral-500 text-black dark:text-neutral-300">
                 Il CEDAT, Centro di Documentazione dell’Acqua e della Terra, è
                 situato nella splendida cornice di Palazzo Camilli. L’ambizione
                 è quella di realizzare un centro studi che diventi un punto di
-                riferimento relativamente all'argomento "Acqua" <br />
+                riferimento relativamente all'argomento "Acqua". <br />
                 <br />
                 Il CEDAT, Centro di Documentazione dell'Acqua e della Terra, si
                 articola su due livelli all'interno di Palazzo Camilli,
