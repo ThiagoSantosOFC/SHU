@@ -1,18 +1,54 @@
-import React from 'react';
+import { useRouter } from "next/router";
+import { useState } from "react";
+const SelectLang = () => {
+  const router = useRouter();
 
-function SelectLang(props) {
-  const { languages, selectedLanguage, onLanguageChange } = props;
+  const langGet = ()  => {
+    if (router.pathname.startsWith("/en")) {
+      return "en";
+    } else {
+      return "italian";
+    }
+  };
 
+  const [lang, setLang] = useState(langGet());
+
+  const handleLangChange = (lang) => {
+    setLang(lang);
+    if (lang === "en") {
+      router.push("/en");
+      router.reload();
+    } else {
+      router.push("/");
+      router.reload();
+    }
+
+  };
+
+  const label = lang === "en" ? "Language" : "Lingua";
+
+
+
+
+  
   return (
-    <select value={selectedLanguage} onChange={onLanguageChange}>
-      {languages.map((language) => (
-        <option key={language.code} value={language.code}>
-          {language.name} {language.code === 'en' && <img src="/images/england-flag.png" alt="English flag" />}
-          {language.code === 'en' && <img src="/images/uk-flag.png" alt="UK flag" />}
+    <div className="flex justify-center items-center">
+      <label htmlFor="lang-select" className="mr-2">
+        {label}
+      </label>
+      <select
+        id="lang-select"
+        className="px-2 py-1 rounded-md bg-gray-200 text-black mb-2 text-sm font-medium"
+        value={lang}
+        onChange={(e) => handleLangChange(e.target.value)}
+      >
+        <option className="text-black" value="italian">
+          Italiano
         </option>
-      ))}
-    </select>
+        <option value="en">English</option>
+      </select>
+    </div>
   );
-}
+};
 
 export default SelectLang;
