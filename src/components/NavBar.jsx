@@ -6,6 +6,7 @@ import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
 import CEDAT from "../public/CEDAT.jpeg";
+import NWH from "../public/assets/waterHeritage.png";
 import Italian from "../public/italy(1).png";
 import English from "../public/united-kingdom(1).png";
 
@@ -34,25 +35,25 @@ const NavBar = ({ lang }) => {
       return (
         <>
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href="/en">
               Home
             </Link>
           </li>
 
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
-            <Link legacyBehavior href="/Map">
+            <Link legacyBehavior href="/en/Map">
               Map
             </Link>
           </li>
 
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
-            <Link legacyBehavior href="/contacts">
+            <Link legacyBehavior href="/en/contacts">
               Contacts
             </Link>
           </li>
 
           <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
-            <Link legacyBehavior href="/knowmore">
+            <Link legacyBehavior href="/en/knowmore">
               Knowmore
             </Link>
           </li>
@@ -114,6 +115,17 @@ const NavBar = ({ lang }) => {
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="flex justify-between items-center">
+        <Link legacyBehavior href="/">
+            <a className="pr-4">
+              <Image
+                src={NWH}
+                alt="/"
+                width="65"
+                height="65"
+                className="bg-[#ffffffda] cursor-pointer border rounded-full"
+              />
+            </a>
+          </Link>
           <Link legacyBehavior href="/">
             <a className="pr-4">
               <Image

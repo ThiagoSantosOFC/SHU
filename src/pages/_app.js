@@ -9,7 +9,7 @@ class NWH extends App {
   constructor(props) {
     super(props);
     this.state = {
-      selectedLanguage: 'italian',
+      selectedLanguage: 'en',
     };
   }
 
