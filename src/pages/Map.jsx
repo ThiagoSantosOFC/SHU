@@ -22,4 +22,5 @@ const Map = React.memo(() => {
   );
 });
 
+Map.displayName = "Map";
 export default Map;
