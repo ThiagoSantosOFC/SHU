@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --foreground-rgb: 148, 192, 252;
   --background-start-rgb: 98, 176, 248;
   --background-end-rgb: 24, 38, 83
 }
-
+html {
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -19,8 +24,8 @@
 
 
 body {
-  font-family: 'Lexend', sans-serif;
-  color: rgb(var(--foreground-rgb));
+  font-family: 'Raleway', sans-serif;
+  color: rgb(245, 239, 228);
   background: linear-gradient(
       to bottom,
       transparent,
@@ -31,11 +36,29 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+
+  
 }
 
+@layer base {
 h1, h2, h3, h4, h5, h6 {
-  color: floralwhite;
-  font-family: 'Lexend', serif;
+  @apply font-bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  @apply text-4xl sm:text-5xl md:text-6xl;
+}
+
+h2 {
+  @apply text-3xl sm:text-4xl;
+}
+
+li {
+  @apply cursor-pointer;
+}
+
+
 }
 
 .flex {

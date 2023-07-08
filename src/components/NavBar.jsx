@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Image from "next/image";
+import Link from "next/link";
 import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
@@ -13,7 +13,6 @@ const NavBar = ({ lang }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
-  const [linkColor, setLinkColor] = useState("#ffffff");
 
   const handleNav = () => {
     setNav(!nav);
@@ -34,53 +33,53 @@ const NavBar = ({ lang }) => {
     if (lang === "en") {
       return (
         <>
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/">
               Home
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/Map">
               Map
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/contacts">
               Contacts
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/knowmore">
               Knowmore
             </Link>
           </li>
         </>
       );
-    } else if (lang === "Italian") {
+    } else if (lang === "italian") {
       return (
         <>
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 color-white text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/">
               Casa
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/Map">
               Mappa
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/contacts">
               Contatti
             </Link>
           </li>
 
-          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5">
+          <li className="ml-10 text-sm uppercase font-bold hover:border-b pt-2.5" style={{ fontWeight: "bold", color: "#fff" }}>
             <Link legacyBehavior href="/knowmore">
               Saperne di più
             </Link>
@@ -140,19 +139,13 @@ const NavBar = ({ lang }) => {
         </div>
 
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+          <ul className="hidden md:flex">
             {renderNavLinks()}
-            <li className="ml-10 pt-2.5">
 
-
-        
-   
-
-            </li>
           </ul>
           {/* Hamburger Icon */}
           <div
-            style={{ color: `${linkColor}` }}
+          style={{ fontWeight: "bold", color: "#fff" }}
             onClick={handleNav}
             className="sm:hidden"
           >
@@ -186,23 +179,18 @@ const NavBar = ({ lang }) => {
               </Link>
               <div
                 onClick={handleNav}
-                className="rounded-full shadow-lg shadow-blue-500 p-3 cursor-pointer"
+                className="rounded-full shadow-lg shadow-blue-700 p-3 cursor-pointer"style={{ fontWeight: "bold", color: "#fff" }}
               >
                 <AiOutlineClose />
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[90%] md:w-[80%] py-2 font-bold">
-                &quot;Viajar? Para viajar basta Existir.&quot; - Fernando
-                Pessoa.
-              </p>
+      
             </div>
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">{renderNavLinks()}</ul>
-            <li className="mt-4">
-
-            </li>
+  
           </div>
         </div>
       </div>
