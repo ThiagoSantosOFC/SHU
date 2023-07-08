@@ -7,8 +7,9 @@ export default function Home() {
       <Header />
      
    
-       
-      <SelectLang/>
+      <div className="mt-24">
+        <SelectLang />
+      </div>
    
     </div>
   );
