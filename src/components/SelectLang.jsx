@@ -17,8 +17,10 @@ const SelectLang = () => {
     setLang(lang);
     if (lang === "en") {
       router.push("/en");
+      router.reload();
     } else {
       router.push("/");
+      router.reload();
     }
 
   };
