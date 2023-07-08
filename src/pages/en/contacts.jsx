@@ -4,13 +4,13 @@ import Image from "next/image";
 export default function contactos() {
   return (
     <div>
-      <div class="ml-12 container  mx-auto md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         {/* <!-- Section: Design Block --> */}
-        <section class="">
-          <div class="flex flex-wrap">
-            <div class="mt-52 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
-            <h1  class="mb-6 text-5xl font-bold">Contact us</h1>
-              <p class="mb-6 text-neutral-500 text-black dark:text-neutral-300">
+        <section className="mt-4 md:mt-8">
+          <div className="flex flex-wrap">
+            <div className="w-full">
+              <h1 className="mt-40 mb-4 text-3xl md:text-5xl font-bold">Contact us</h1>
+              <p className="mb-4 text-sm md:text-base text-gray-700">
                 CEDAT, Water and Earth Documentation Center, is located in the
                 beautiful setting of Palazzo Camilli. The aim is to create a
                 study center that will become a point of reference regarding the
@@ -38,12 +38,12 @@ export default function contactos() {
                 support, finally, on the second floor of the structure, as well
                 as the headquarters of the cultural association "L'Arengo."
               </p>
-              <p class="mb-2 text-neutral-500 text-black dark:text-neutral-300">
+              <p className="mb-2 text-sm md:text-base text-gray-700">
                 Tel: +39 0742 834011
                 <br />
                 Fax: +39 0742 812133
               </p>
-              <p class="mb-2 text-neutral-500 text-black dark:text-neutral-300">
+              <p className="mb-2 text-sm md:text-base text-gray-700">
                 Email: rag@comune.noceraumbra.pg.it
               </p>
             </div>

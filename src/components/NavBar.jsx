@@ -195,12 +195,6 @@ const NavBar = ({ lang }) => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Link legacyBehavior href="/">
-                <a>
-                  <Image src={NavLogo} width="75" height="75" alt="/" />
-                  <Image src={CEDAT} width="75" height="75 " alt="/"/>
-                </a>
-              </Link>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-blue-700 p-3 cursor-pointer"style={{ fontWeight: "bold", color: "#fff" }}
