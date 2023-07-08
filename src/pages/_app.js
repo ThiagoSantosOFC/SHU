@@ -23,7 +23,7 @@ class NWH extends App {
 
     return (
       <>
-        <NavBar lang={selectedLanguage} />
+        <NavBar  lang={selectedLanguage} />
         <Component {...pageProps} lang={selectedLanguage} />
         <Footer />
       </>
