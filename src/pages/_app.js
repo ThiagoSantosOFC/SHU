@@ -1,11 +1,15 @@
 import React from 'react';
 import App from 'next/app';
+<<<<<<< HEAD
+import '../styles/globals.css';
 
 
+=======
 import NavBar from '../components/NavBar';
 import SelectLang from '../components/SelectLang';
 import '../styles/globals.css';
 import Footer from '../components/footer';
+>>>>>>> parent of 6cf43d3 (Merge branch 'main' of https://github.com/ThiagoSantosOFC/SHU)
 
 class NWH extends App {
   constructor(props) {
