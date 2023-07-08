@@ -29,6 +29,11 @@ const Header = () => {
           </p>
         </div>
       </div>
+      <p className="py-4 text-gray-700 sm:max-w-[70%] m-auto">
+        <b>Water Heritage Nocera Umbra</b> è un <b>progetto</b> ideato per
+        diffondere il patrimonio di uno degli elementi naturali che
+        caratterizzano la piccola città di Nocera Umbra: l'acqua.
+      </p>
     </div>
   );
 };

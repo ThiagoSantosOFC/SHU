@@ -4,7 +4,10 @@ import Image from "next/image";
 export default function contactos() {
   return (
     <div>
-      <div className="container mx-auto px-4 md:px-6">
+
+   
+      <div className=" container  mx-auto md:px-6">
+
         {/* <!-- Section: Design Block --> */}
         <section className="mt-4 md:mt-8">
           <div className="flex flex-wrap">
@@ -53,6 +56,7 @@ export default function contactos() {
         {/* <!-- Section: Design Block --> */}
       </div>
       {/* <!-- Container for demo purpose        https://tailwind-elements.com/snippets/tailwind/tailwindelements/5203857#html-tab-view   -->*/}
+      <Footer />
     </div>
   );
 }
