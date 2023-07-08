@@ -34,10 +34,6 @@ const Header = () => {
         diffondere il patrimonio di uno degli elementi naturali che
         caratterizzano la piccola città di Nocera Umbra: l'acqua.
       </p>
-
-
-
-    
     </div>
   );
 };
