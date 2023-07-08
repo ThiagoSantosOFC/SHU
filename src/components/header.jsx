@@ -5,9 +5,9 @@ import waterHeritage from "../public/assets/waterHeritage.png";
 const Header = () => {
   return (
     <div id="home" className="w-full  h-screen text-center">
-      <div className="max-w-[1024px] w-full h-full pt-24 mx-auto flex flex-col justify-center items-center">
+      <div className="max-w-[1024px] w-full  h-full pt-24 mx-auto flex flex-col justify-center items-center">
         <div className="mb-8">
-          <p className="uppercase text-sm tracking-widest text-gray-600">
+          <p className="uppercase text-sm tracking-widest pt-24 text-gray-600">
             <strong>
               Scopri l&apos;antico tesoro d&apos;acqua di Nocera Umbra con Water Heritage!
             </strong>
@@ -15,10 +15,10 @@ const Header = () => {
           <h1 className="py-4 text-gray-700">Water Heritage Nocera Umbra</h1>
         </div>
 
-        <div className="w-full max-w-md m-8 p-2 shadow-xl bg-white rounded-full hover:scale-105 ease-in duration-300">
+        <div className="w-full w-[300px] max-w-md m-8 p-2 shadow-xl bg-white rounded-full hover:scale-105 ease-in duration-300">
           <div className="justify-center items-center">
             <div className="m-auto">
-              <Image src={waterHeritage} width="400px" height="auto" alt="/" />
+              <Image src={waterHeritage} width="200px" height="auto" alt="/" />
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import waterHeritage from "../../public/assets/waterHeritage.png";
 const Main = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1024px] w-full h-full mx-auto flex justify-center items-center">
+      <div className="max-w-[1024px] w-full PT-16 h-full mx-auto flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600">
             <strong>

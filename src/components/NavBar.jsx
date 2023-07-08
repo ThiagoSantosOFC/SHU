@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import SelectLang from "./SelectLang";
 
 import NavLogo from "../public/SHULOGO.png";
 import CEDAT from "../public/CEDAT.jpeg";
 import NWH from "../public/assets/waterHeritage.png";
-import Italian from "../public/italy(1).png";
-import English from "../public/united-kingdom(1).png";
 
-const NavBar = ({ lang }) => {
+const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#62a7f8");
+  const router = useRouter();
+  const [lang, setLang] = useState(router.pathname.startsWith("/en") ? "en" : "italian");
 
   const handleNav = () => {
     setNav(!nav);
@@ -102,6 +102,9 @@ const NavBar = ({ lang }) => {
     }
   };
 
+const isEnglish = lang === "en";
+
+
   const handleLanguageChange = (event) => {
     const selectedLang = event.target.value;
 
@@ -125,7 +128,56 @@ const NavBar = ({ lang }) => {
           : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+   <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+  <div className="flex justify-between items-center">
+    <Link legacyBehavior href={router.pathname === "/en" ? "/en/" : "/"}>
+      <a className="pr-4">
+        <Image
+          src={NWH}
+          alt="/"
+          width="65"
+          height="65"
+          className="bg-[#ffffffda] cursor-pointer border rounded-full"
+        />
+      </a>
+    </Link>
+    <Link legacyBehavior href="/">
+      <a className="pr-4">
+        <Image
+          src={CEDAT}
+          alt="/"
+          width="65"
+          height="65"
+          className="cursor-pointer border rounded-3xl"
+        />
+      </a>
+    </Link>
+    <Link legacyBehavior href="/">
+      <a>
+        <Image
+          src={NavLogo}
+          alt="/"
+          width="200"
+          height="200"
+          className="cursor-pointer border rounded-2xl"
+        />
+      </a>
+    </Link>
+  </div>
+</div>
+          <ul className="hidden md:flex">
+            {renderNavLinks()}
+
+          </ul>
+          {/* Hamburger Icon */}
+          <div
+          style={{ fontWeight: "bold", color: "#fff" }}
+            onClick={handleNav}
+            className="sm:hidden"
+          >
+            <AiOutlineMenu size={25} />
+          </div>
+             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="flex justify-between items-center">
         <Link legacyBehavior href="/">
             <a className="pr-4">
@@ -162,20 +214,6 @@ const NavBar = ({ lang }) => {
           </Link>
         </div>
 
-        <div>
-          <ul className="hidden md:flex">
-            {renderNavLinks()}
-
-          </ul>
-          {/* Hamburger Icon */}
-          <div
-          style={{ fontWeight: "bold", color: "#fff" }}
-            onClick={handleNav}
-            className="sm:hidden"
-          >
-            <AiOutlineMenu size={25} />
-          </div>
-        </div>
       </div>
 
       {/* Mobile Menu */}
