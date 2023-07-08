@@ -14,7 +14,7 @@ export default function contactos() {
                 CEDAT, Water and Earth Documentation Center, is located in the
                 beautiful setting of Palazzo Camilli. The aim is to create a
                 study center that will become a point of reference regarding the
-                topic of "Water".
+                topic of &quot;Water&quot;.
                 <br /> <br />
                 CEDAT, (Water and Earth Documentation Center), is spread over
                 two levels within Palazzo Camilli, the latter located in the
@@ -36,7 +36,7 @@ export default function contactos() {
                 <br />
                 Two conference rooms equipped with the necessary computer
                 support, finally, on the second floor of the structure, as well
-                as the headquarters of the cultural association "L'Arengo."
+                as the headquarters of the cultural association &quot;L&apos;Arengo.&quot;
               </p>
               <p className="mb-2 text-sm md:text-base text-gray-700">
                 Tel: +39 0742 834011
