@@ -9,7 +9,7 @@ const Header = () => {
         <div className="mb-8">
           <p className="uppercase text-sm tracking-widest pt-24 text-gray-600">
             <strong>
-              Scopri l&apos;antico tesoro d&apos;acqua di Nocera Umbra con Water Heritage!
+              Scopri l&apos;antico tesoro d&rsquo;acqua di Nocera Umbra con Water Heritage!
             </strong>
           </p>
           <h1 className="py-4 text-gray-700">Water Heritage Nocera Umbra</h1>
