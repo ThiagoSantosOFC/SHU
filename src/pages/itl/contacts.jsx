@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import Footer from '../components/itl/footer';
+import NavBar from '../components/itl/NavBar';
 
 
 export default function contactos() {
   return (
     <div>
+      <NavBar/>
    
       <div class="ml-12 container  mx-auto md:px-6">
         {/* <!-- Section: Design Block --> */}
@@ -14,9 +17,9 @@ export default function contactos() {
               <h2 class="mb-6 text-3xl text-black font-bold">Contact us</h2>
               <p class="mb-6 text-neutral-500 text-black dark:text-neutral-300">
                 The company itself is a very successful company.
-                Those who praise, the ways of accusing the body itself because it is rougher
-                pain, unless it is corrupted, pains will be repelled by elders
-                but let everyone flee from those who see it? To, of truth.
+                 Those who praise, the ways of accusing the body itself because it is rougher
+                 pain, unless it is corrupted, pains will be repelled by elders
+                 but let everyone flee from those who see it? To, of truth.
               </p>
               <p class="mb-2 text-neutral-500 text-black dark:text-neutral-300">
                 New York, 94126, United States
@@ -33,6 +36,7 @@ export default function contactos() {
         {/* <!-- Section: Design Block --> */}
       </div>
       {/* <!-- Container for demo purpose        https://tailwind-elements.com/snippets/tailwind/tailwindelements/5203857#html-tab-view   -->*/}
+      <Footer />
     </div>
   );
 }
