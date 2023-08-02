@@ -1,4 +1,4 @@
-# SHU#2023
+# [SHU#2023](https://www.socialhackathonumbria.info/en/)
 
 **Water Heritage Nocera Umbra** - *Our Winning Creation at SHU#2023 Hackathon*
 
